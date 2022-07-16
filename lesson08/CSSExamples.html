@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>CSSExamples (вырезаем часть изображения) (смайлы)</title>
+  <style>
+    div {
+      border-style: dotted;
+      /* inline, block, inline-block, none*/
+      display: inline-block;
+      /* visibility: hidden; */
+    }
+
+    #smile {
+      height: 25px;
+      width: 25px;
+      background-image: url(../lesson07/images/smileys.png);
+      background-position: -50px -50px;
+      /* background-repeat: no-repeat; */
+    }
+  </style>
+</head>
+<body>
+  текст1 <div id="smile"></div> текст2
+</body>
+</html>

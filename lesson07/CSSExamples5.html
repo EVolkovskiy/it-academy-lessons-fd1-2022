@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>CSSExamples 5 (вырезаем часть изображения)</title>
+  <style>
+    span {
+      border-style: dotted;
+      display: inline-block;
+    }
+
+    #smile1 {
+      height: 25px;
+      width: 25px;
+      background-image: url(./images/smileys.png);
+      background-position: 50px 75px;
+    }
+    #smile2 {
+      height: 25px;
+      width: 25px;
+      background-image: url(./images/smileys.png);
+      background-position: 75px 75px;
+    }
+    #smile3 {
+      height: 25px;
+      width: 25px;
+      background-image: url(./images/smileys.png);
+      background-position: 75px 50px;
+    }
+  </style>
+</head>
+<body>
+  текст1 <span id="smile1"></span> текст2 <span id="smile2"></span> текст3 <span id="smile3"></span>
+</body>
+</html>

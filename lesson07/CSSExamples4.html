@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>CSSExamples (резиновая вёрстка)</title>
+  <style>
+    div {
+      border-style: dotted;
+    }
+
+    #div1 {
+      width: 200px;
+      background-image: url(./images/middle.png);
+      background-repeat: repeat-y;
+    }
+    #div2 {
+      background-image: url(./images/top.png);
+      background-repeat: no-repeat;
+    }
+    #div3 {
+      background-image: url(./images/bottom.png);
+      background-repeat: no-repeat;
+      background-position: left bottom;
+    }
+    #divText {
+      padding-left: 64px;
+    }
+  </style>
+</head>
+<body>
+  <div id="div1">
+    <div id="div2">
+      <div id="div3">
+        <div id="divText">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, incidunt vitae voluptatum recusandae ex animi, molestiae dolor eligendi eius porro ad explicabo ab tempore rem maiores quaerat maxime facilis placeat.
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

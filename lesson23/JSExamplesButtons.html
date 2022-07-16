@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSExamples - Buttons</title>
+</head>
+<body>
+  <!-- <button onclick="console.log('Кнопка нажата!');">Нажми меня!</button> -->
+
+  <button id="hello" onclick="printHello()">Нажми меня!</button>
+  <br>
+
+  <button onclick="countPlus()">Счёт +</button>
+  <button onclick="countMinus()">Счёт -</button>
+
+  <div id="result"></div>
+  <br>
+  <br>
+  <br>
+
+  <form name="info" action="https://fe.it-academy.by/TestForm.php" novalidate>
+    <input name="age" type="text" placeholder="Введите возраст" oninput="resetAgeInputColor">
+    <input type="submit" value="Отправить">
+  </form>
+
+  <div id="jquery-result"></div>
+
+  <!-- подключаем jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script type="text/javascript" src="JSExamplesButtons.js"></script>
+</body>
+</html>

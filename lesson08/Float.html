@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Float</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      border-style: dotted;
+      width: 15px;
+      height: 15px;
+    }
+
+    .boxBig {
+      border-style: dotted;
+      width: 50px;
+      height: 50px;
+    }
+
+    .boxSmall {
+      border-style: dotted;
+      width: 5px;
+      height: 5px;
+    }
+
+    .floatLeftBlock {
+      /* Float - плавающий */
+      float: left; 
+    }
+
+    .floatRightBlock {
+      float: right; 
+    }
+
+    .clearfix {
+      /* clear - чистить */
+      /* left - игнорировать float-блоки слева */
+      /* right - игнорировать float-блоки справа */
+      /* both - игнорировать float-блоки (с двух сторон) */
+      clear: both; 
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+
+  <table style="margin: auto;width: 100%;">
+    <tbody>
+      <tr>
+        <td style="width: 100px;">1</td>
+        <td style="width: auto;">2</td>
+        <td style="width: 150px;">3</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br >
+  <br >
+
+  <div class="box floatLeftBlock"></div>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus excepturi nisi sed cum sit eos veniam a iste nulla illo? Temporibus magni repudiandae aliquid quo in eius? Necessitatibus, sequi et!</p>
+
+  <br >
+  <br >
+  
+  <div class="box floatLeftBlock"></div>
+  <div class="boxBig floatLeftBlock"></div>
+  <div class="boxSmall floatLeftBlock"></div>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus excepturi nisi sed cum sit eos veniam a iste nulla illo? Temporibus magni repudiandae aliquid quo in eius? Necessitatibus, sequi et!</p>
+  
+  <br >
+  <br >
+  
+  <div class="box floatRightBlock"></div>
+  <div class="boxBig floatRightBlock"></div>
+  <div class="boxSmall floatRightBlock"></div>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus excepturi nisi sed cum sit eos veniam a iste nulla illo? Temporibus magni repudiandae aliquid quo in eius? Necessitatibus, sequi et!</p>
+
+  <br >
+  <br >
+
+  <div class="box floatRightBlock"></div>
+  <div class="box floatLeftBlock"></div>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus excepturi nisi sed cum sit eos veniam a iste nulla illo? Temporibus magni repudiandae aliquid quo in eius? Necessitatibus, sequi et!</p>
+
+  <br >
+  <br >
+
+  <div class="boxBig floatLeftBlock"></div>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+  <div class="clearfix"></div>
+  <h4 style="margin: 15px"> (какой-то текст)</h4>
+  <div class="boxBig floatLeftBlock"></div>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus excepturi nisi sed cum sit eos veniam a iste nulla illo? Temporibus magni repudiandae aliquid quo in eius? Necessitatibus, sequi et!</p>
+  <div class="clearfix"></div>
+
+</body>
+</html>

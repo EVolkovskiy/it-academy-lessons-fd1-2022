@@ -1,0 +1,129 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS examples</title>
+  <script>
+    /* Основные типы данных в JS:
+      - строка
+      - число
+      - логическое - только "да" или "нет" ("правда"/"ложь") ("true"/"false")
+      - NaN - non a number 
+      - null - пустое значение
+      - undefined - пустое значение
+    */
+
+    // сравнить строки
+    console.log("Сравнение строк:");
+    console.log('"яблоко" > "ананас"', "яблоко" > "ананас");
+    console.log('"клубника" >= "малина"', "клубника" >= "малина");
+
+    // сложение не верное - складываются строки (1.2 + 2.1 = 1.22.1)
+    // var userInputA = prompt("Введите число А:");
+    // var userInputB = prompt("Введите число B:");
+    // alert("A + B =" + (userInputA + userInputB));
+
+    // console.log("Сравнение строк:");
+    
+    // parse - преобразовать/достать
+    // Int - integer - целое число
+    console.log("parseInt:");
+    console.log('"1.2"', parseInt("1.2")) // 1
+    console.log('"3"', parseInt("3"))
+    console.log('"31 метр"', parseInt("31 метр")) // 31
+    console.log('"нужно 2 кг"', parseInt("нужно 2 кг")) // NaN
+
+    console.log("parseFloat:");
+    console.log('"1.2"', parseFloat("1.2")) // 1.2
+    console.log('"3"', parseFloat("3")) // 3
+    console.log('"31.3 метра"', parseFloat("31.3 метра")) // 31.3
+    console.log('"нужно 2.5 кг"', parseFloat("нужно 2.5 кг")) // NaN
+
+    console.log("Number:");
+    console.log('"1.2"', Number("1.2")) // 1.2
+    console.log('"3"', Number("3")) // 3
+    console.log('"31.3 метра"', Number("31.3 метра")) // NaN
+    console.log('"нужно 2.5 кг"', Number("нужно 2.5 кг")) // NaN
+
+    // NaN - not a number (не число) (неопределённость)
+    // NaN и любое действие с числом = NaN (NaN + 1 = NaN, NaN * 2 = NaN)
+
+    // Infinity - бесконечность
+    // Infinity > 100000000000000 (больше любого из чисел)
+
+    var parseFloatResult = parseFloat("нужно 2.5 кг"); // NaN
+    console.log('это NaN ?', isNaN(parseFloatResult)); // true
+    console.log('это конечное число?', isFinite(Infinity)); // Finite - конечный
+
+    console.log('\n');
+    console.log('if-блоки');
+    console.log('\n');
+
+    // ЕСЛИ (логическое условие == TRUE) TO { действия... }
+    // if (логическое условие == TRUE) { действия... }
+    if (5 > 3) {
+      // 5 > 3 можем заменить на true
+      console.log('Я всегда вывожусь в консоль');
+      console.log('И я тоже');
+    }
+
+    // ЕСЛИ (логическое условие == TRUE) { действия... } ИНАЧЕ { другие действия... }
+    if (5 < 3) {
+      // 5 < 3 можем заменить на false
+      console.log('Я никогда не отображусь в консоли');
+    } else {
+      console.log('Это строка из "иначе"');
+      console.log('Это строка из "иначе" (тоже)');
+    }
+
+    var userInputA = prompt("Введите число А:");
+    var userInputB = prompt("Введите число B:");
+    
+    // старая версия
+    // if (parseInt(userInputA) > parseInt(userInputB)) {
+    //   alert('Первое число больше!');
+    // } else {
+    //   alert('Первое число меньше!');
+    // }
+
+    // улучшенная версия
+    // ЕСЛИ () {} ИНАЧЕ ЕСЛИ () {} ИНАЧЕ {}
+    if (parseInt(userInputA) > parseInt(userInputB)) {
+      alert('Первое число больше!');
+    } else if (parseInt(userInputA) == parseInt(userInputB)) {
+      alert('Числа равны!');
+    } else {
+      alert('Первое число меньше!');
+    }
+
+    var userInputA = prompt("Введите число А:");
+    userInputA = parseInt(userInputA);
+    var userInputB = parseInt(prompt("Введите число B:"));
+
+    if (isNaN(userInputA)) {
+      alert('Неверное число A!');
+    } else if (isNaN(userInputB)) {
+      alert('Неверное число B!');
+    } else {
+      alert("A + B =" + (userInputA + userInputB));
+    }
+
+    // может быть ещё такой вариант:
+    /* if (isNaN(userInputA)) {
+      alert('Неверное число A!');
+    } else {
+      if (isNaN(userInputB)) {
+        alert('Неверное число B!');
+      } else {
+        alert("A + B =" + (userInputA + userInputB));
+      }
+    }
+    */
+
+    </script>
+</head>
+<body>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo veniam repellat accusantium sequi vitae dicta quo nesciunt recusandae ipsa! Fugit quo exercitationem, officia magni est saepe labore delectus cum consequatur?</p>
+</body>
+</html>

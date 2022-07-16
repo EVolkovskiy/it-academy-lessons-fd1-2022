@@ -1,0 +1,172 @@
+.leftColor {
+  background-color: aquamarine;
+}
+
+.midColor {
+  background-color: rgb(125, 45, 67);
+}
+
+.rightColor {
+  background-color: #777;
+}
+
+.clearfix {
+  padding: 20px;
+  clear: both; 
+}
+
+#left1 {
+  width: auto;
+  margin-right: 25%;
+}
+
+#right1 {
+  float: right;
+  width: 25%;
+}
+
+#left2 {
+  width: auto;
+  margin-right: 200px;
+}
+
+#right2 {
+  float: right;
+  width: 200px;
+}
+
+#left3 {
+  float: left;
+  width: 25%;
+}
+
+#right3 {
+  margin-left: 25%;
+}
+
+#left4 {
+  float: left;
+  width: 200px;
+}
+
+#right4 {
+  margin-left: 200px;
+}
+
+#left5 {
+  float: left;
+  width: 25%;
+}
+
+#right5 {
+  float: left;
+  width: 95%;
+}
+
+#col1 {
+  width: 15%;
+  float: left;
+  background-color: blueviolet;
+}
+
+#col2 {
+  width: 25%;
+  float: left;
+  background-color: #777;
+}
+
+#col3 {
+  /* 40/60 -> 66.7% */
+  width: 66.7%;
+  float: left;
+  background-color: rgb(125, 45, 67);
+}
+
+#col4 {
+  /* 20/60 -> 33.3% */
+  width: 33.3%;
+  float: left;
+  background-color: rgb(63, 94, 126);
+}
+
+#left6 {
+  float: left;
+  width: 25%;
+}
+
+#mid6 {
+  float: left;
+  width: 200px;
+}
+
+#right6 {
+  /* float: left; */
+  margin-left: 200px;
+}
+
+#left7 {
+  float: left;
+  width: 200px;
+}
+
+#mid7 {
+  float: left;
+  width: 25%;
+}
+
+#right7 {
+  margin-left: 200px;
+  overflow: hidden;
+}
+
+#col1-from5 {
+  width: 100px;
+  float: left;
+  background-color: blueviolet;
+}
+
+#col2-from5 {
+  width: 10%;
+  float: left;
+  background-color: rgb(63, 94, 126);
+}
+
+#col3-from5 {
+  overflow: hidden;
+  background-color: rgb(125, 45, 67);
+}
+
+#col4-from5 {
+  width: 150px;
+  float: right;
+  background-color: rgb(51, 134, 101);
+}
+
+#col5-from5 {
+  width: 15%;
+  float: right;
+  background-color: #777;
+}
+
+#left8 {
+  float: left;
+  width: 25%;
+  min-width: 200px;
+  /* или */
+  /* width: 25%;
+  max-width: 300px; */
+}
+
+#right8 {
+  margin-left: 25%;
+  overflow: hidden;
+}
+
+#wrapper1 {
+  float: right;
+  width: 60%;
+}
+
+#wrapper2 {
+  margin-left: 25%;
+}

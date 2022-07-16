@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation</title>
+  <style>
+    .box {
+      width: 200px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    /* keyframes - ключевые кадры */
+    @keyframes Animation1 {
+      from { background-color: brown; }
+      to { background-color: blue; }
+    }
+
+    .animation-1 {
+      color: white;
+      /* infinite - бесконечное повторение (! по умолчанию - linear - сработает 1 раз) */
+      animation: Animation1 5s infinite;
+    }
+
+    @keyframes Animation2 {
+      from { background-color: red; }
+      25% { background-color: yellow; }
+      50% { background-color: green; }
+      75% { background-color: orange; }
+      to { background-color: blue; }
+    }
+
+    .animation-2 {
+      color: white;
+      animation: Animation2 10s infinite;
+    }
+
+    @keyframes Animation31 {
+      from { background-color: red; }
+      to { background-color: blue; }
+    }
+
+    @keyframes Animation32 {
+      from { color: blue; }
+      to { color: red; }
+    }
+
+    /* можно использовать 2 разных анимации одновременно */
+    .animation-3 {
+      animation:
+        Animation31 3s infinite,
+        Animation32 10s infinite;
+    }
+
+    @keyframes Animation4 {
+      from { font-size: 16px; }
+      to { font-size: 20px; }
+    }
+
+    /* можно использовать c hover */
+    .animation-4:hover {
+      animation: Animation4 3s infinite;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box animation-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi placeat a amet numquam harum assumenda, atque esse reprehenderit hic adipisci doloribus magni impedit necessitatibus id perferendis in inventore tenetur commodi?</div>
+
+  <div class="box animation-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi placeat a amet numquam harum assumenda, atque esse reprehenderit hic adipisci doloribus magni impedit necessitatibus id perferendis in inventore tenetur commodi?</div>
+
+  <div class="box animation-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi placeat a amet numquam harum assumenda, atque esse reprehenderit hic adipisci doloribus magni impedit necessitatibus id perferendis in inventore tenetur commodi?</div>
+
+  <div class="box animation-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi placeat a amet numquam harum assumenda, atque esse reprehenderit hic adipisci doloribus magni impedit necessitatibus id perferendis in inventore tenetur commodi?</div>
+</body>
+</html>

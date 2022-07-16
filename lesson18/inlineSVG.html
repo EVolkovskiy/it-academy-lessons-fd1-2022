@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inline SVG</title>
+  <style>
+    svg {
+      fill: brown;
+    }
+
+    /* не сработает, т.к. это уже цельная картинка */
+    img {
+      fill: brown;
+    }
+
+    /* для svg - будет работать, если есть атрибут viewBox */
+    svg, img {
+      height: 100px;
+      width: 100px;
+    }
+
+    .background-big-svg {
+      background-repeat: no-repeat;
+      height: 100px;
+      width: 100px;
+      background-size: contain;
+    }
+
+    .background-cover {
+      height: 100px;
+      width: 100px;
+    }
+    
+    .rotate {
+      transition: all 1s;
+    }
+
+    .rotate:hover {
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+<body>
+  <h4>img-svg-иконки</h4>
+  <img src="./icons/add.svg" width="48px" height="48px" />
+  <br />
+  <img src="./icons/close.svg" width="48px" height="48px" />
+  <br />
+  <img src="./icons/home.svg" width="48px" height="48px" />
+  <br />
+
+  <h4>background-svg-иконки</h4>
+  <div class="background-big-svg" style="background-image: url(./icons/add.svg)"></div>
+  <br />
+  <div class="background-cover" style="background-image: url(./icons/close.svg)"></div>
+  <br />
+  <div style="background-image: url(./icons/home.svg); width: 48px; height: 48px;"></div>
+  <br />
+
+  <h4>inline-svg-иконки</h4>
+  <!-- add svg -->
+  <!-- нету аттрибута viewBox - поэтому плохо с изменением размеров -->
+  <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M22.5 38V25.5H10V22.5H22.5V10H25.5V22.5H38V25.5H25.5V38Z"/></svg>
+  <br />
+  <!-- close svg -->
+  <svg class="rotate" xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48"><path d="M12.45 37.65 10.35 35.55 21.9 24 10.35 12.45 12.45 10.35 24 21.9 35.55 10.35 37.65 12.45 26.1 24 37.65 35.55 35.55 37.65 24 26.1Z"/></svg>
+  <br />
+  <!-- home svg -->
+  <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48"><path d="M8 42V18L24.1 6L40 18V42H28.3V27.75H19.65V42ZM11 39H16.65V24.75H31.3V39H37V19.5L24.1 9.75L11 19.5ZM24 24.35Z"/></svg>
+  <br />
+
+</body>
+</html>

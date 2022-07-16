@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS examples</title>
+  <script>
+    // циклы - выполнение действий несколько раз
+
+    var age = NaN;
+
+    // while - делай, пока (условие)
+    // while (условие == TRUE) { действия }
+    while (isNaN(age) || (age < 10)) {
+      var ageStr = prompt('Введите возраст');
+      age = parseInt(ageStr);
+
+      if (age < 10) {
+        alert('Вам нельзя пользоваться сайтом');
+      }
+    }
+
+    alert('Вы ввели возраст: ' + age);
+  </script>
+</head>
+<body>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo veniam repellat accusantium sequi vitae dicta quo nesciunt recusandae ipsa! Fugit quo exercitationem, officia magni est saepe labore delectus cum consequatur?</p>
+</body>
+</html>

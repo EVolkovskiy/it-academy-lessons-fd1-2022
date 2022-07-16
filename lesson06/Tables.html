@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Таблицы</title>
+</head>
+<body>
+  <h4>Таблица 1 (1 ячейка)</h4>
+
+  <table border="1">
+    <tr> <!-- tr = table row (строка таблицы) -->
+      <td> <!-- td = table data (одно значение таблицы) -->
+        ячейка
+      </td>
+    </tr>
+  </table>
+
+  <h4>Таблица 2 (1 строка)</h4>
+
+  <table border="1">
+    <tr> <!-- tr = table row (строка таблицы) -->
+      <td> <!-- td = table data (одно значение таблицы) -->
+        ячейка1
+      </td>
+      <td>
+        ячейка2
+      </td>
+      <td>
+        ячейка3
+      </td>
+    </tr>
+  </table>
+
+  <h4>Таблица 3 (2х2)</h4>
+
+  <table border="1">
+    <tr> <!-- tr = table row (строка таблицы) -->
+      <td> <!-- td = table data (одно значение таблицы) -->
+        строка1 ячейка1
+      </td>
+      <td>
+        строка1 ячейка2
+      </td>
+    </tr>
+    <tr>
+      <td>
+        строка2 ячейка1
+      </td>
+      <td>
+        строка2 ячейка2
+      </td>
+    </tr>
+  </table>
+
+  <h4>Таблица 4 (4х4)</h4>
+
+  <table border="1">
+    <tr>
+      <td>
+        11
+      </td>
+      <td>
+        12
+      </td>
+      <td>
+        13
+      </td>
+      <td>
+        14
+      </td>
+    </tr>
+    <tr>
+      <td>
+        21
+      </td>
+      <td>
+        22
+      </td>
+      <td>
+        23
+      </td>
+      <td>
+        24
+      </td>
+    </tr>
+    <tr>
+      <td>
+        31
+      </td>
+      <td>
+        32
+      </td>
+      <td>
+        33
+      </td>
+      <td>
+        34
+      </td>
+    </tr>
+    <tr>
+      <td>
+        41
+      </td>
+      <td>
+        42
+      </td>
+      <td>
+        43
+      </td>
+      <td>
+        44
+      </td>
+    </tr>
+  </table>
+
+  <h4>Таблица 5 (таблица с подписью)</h4>
+
+  <table border="1">
+    <caption>
+      Это подпись к таблице №5
+    </caption>
+    <tr>
+      <td>
+        строка1 ячейка1
+      </td>
+      <td>
+        строка1 ячейка2
+      </td>
+    </tr>
+  </table>
+
+  <h4>Таблица 6 (таблица с "расширениями")</h4>
+
+  <table border="1">
+    <tr>
+      <td colspan="2"> <!-- col - column (столбец); colspan - расширяет ячейку по горизонтали -->
+        11 & 12
+      </td>
+      <td rowspan="3"> <!-- row (строка); rowspan - объединяет ячейку по вертикали -->
+        13 & 23 & 33
+      </td>
+    </tr>
+    <tr>
+      <td>
+        21
+      </td>
+      <td>
+        22
+      </td>
+    </tr>
+    <tr>
+      <td>
+        31
+      </td>
+      <td>
+        32
+      </td>
+    </tr>
+  </table>
+
+  <h4>Таблица 7 (4х4 с "выпадениями")</h4>
+
+  <table border="1">
+    <tr>
+      <td>
+        11
+      </td>
+      <td>
+        12
+      </td>
+      <td>
+        13
+      </td>
+    </tr>
+    <tr>
+      <td>
+        21
+      </td>
+      <td>
+        22
+      </td>
+    </tr>
+    <tr>
+      <td>
+        31
+      </td>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+
+  <h4>Таблица 8 (с заголовком)</h4>
+
+  <table border="1">
+    <tr>
+      <th> <!-- table header (cell) - (ячейка) заголовка таблицы -->
+        Кол-во
+      </th>
+      <th>
+        Плотность
+      </th>
+    </tr>
+    <tr>
+      <td>
+        123.2
+      </td>
+      <td>
+        10.5
+      </td>
+    </tr>
+  </table>
+
+  <h4>Таблица 9 (с заголовками вверху и слева)</h4>
+
+  <table border="1">
+    <tr>
+      <th> <!-- table header (cell) - (ячейка) заголовка таблицы -->
+        <!-- \ -->
+      </th>
+      <th>
+        Кол-во
+      </th>
+      <th>
+        Плотность
+      </th>
+    </tr>
+    <tr>
+      <th>
+        В воздухе
+      </th>
+      <td>
+        1.2
+      </td>
+      <td>
+        10.5
+      </td>
+    </tr>
+    <tr>
+      <th>
+        В вакуме
+      </th>
+      <td>
+        78.5
+      </td>
+      <td>
+        9.7
+      </td>
+    </tr>
+  </table>
+
+  <h4>Таблица 10 (с явным tbody)</h4>
+
+  <table border="1">
+    <tbody>
+      <tr>
+        <td>
+          одна ячейка
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4>Таблица 11 (с явным несколькими tbody)</h4>
+
+  <table border="1">
+    <tbody>
+      <tr>
+        <th>
+        </th>
+        <th>
+          Кол-во
+        </th>
+        <th>
+          Плотность
+        </th>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <tr>
+        <th>
+          В воздухе
+        </th>
+        <td>
+          1.2
+        </td>
+        <td>
+          10.5
+        </td>
+      </tr>
+      <tr>
+        <th>
+          В вакуме
+        </th>
+        <td>
+          78.5
+        </td>
+        <td>
+          9.7
+        </td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <tr>
+        <th>
+          В Гродно
+        </th>
+        <td>
+          43.5
+        </td>
+        <td>
+          45.7
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4>Таблица 12 (с заголовком thead)</h4>
+
+  <table border="1">
+    <thead> <!-- table head(er) - голова/верх/шапка -->
+      <tr>
+        <th>Кол-во</th>
+        <th>Плотность</th>
+      </tr>
+    </thead>
+    <!-- tbody - уже обязателен, т.к. есть thead -->
+    <tbody> 
+      <tr>
+        <td>
+          123.2
+        </td>
+        <td>
+          10.5
+        </td>
+      </tr>  
+    </tbody>    
+  </table>
+
+  <h4>Таблица 13 (с tfoot)</h4>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Кол-во</th>
+        <th>Плотность</th>
+      </tr>
+    </thead>
+
+    <!-- tbody - уже обязателен, т.к. есть thead -->
+
+    <tbody>
+      <tr>
+        <td>
+          123.2
+        </td>
+        <td>
+          10.5
+        </td>
+      </tr>
+    </tbody>
+
+    <tfoot> <!-- table foot(er) - нога/низ/"подвал" -->
+      <tr>
+        <th>Кол-во</th>
+        <th>Плотность</th>
+      </tr>
+    </tfoot>
+  </table>
+
+  <h4>Таблица 14</h4>
+
+  <table border="1">
+    <caption>
+      Подпись к таблице №14
+    </caption>
+
+    <thead>
+      <tr>
+        <th>Кол-во</th>
+        <th>Плотность</th>
+      </tr>
+    </thead>
+
+    <!-- tbody - уже обязателен, т.к. есть thead -->
+
+    <tbody>
+      <tr>
+        <td>
+          123.2
+        </td>
+        <td>
+          10.5
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>
+          456.2
+        </td>
+        <td>
+          789.5
+        </td>
+      </tr>
+    </tbody>
+
+    <tfoot> <!-- table foot(er) - нога/низ/"подвал" -->
+      <tr>
+        <th>Кол-во</th>
+        <th>Плотность</th>
+      </tr>
+    </tfoot>
+  </table>
+
+</body>
+</html>

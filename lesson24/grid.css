@@ -1,0 +1,39 @@
+/* словарик:
+grid - сетка
+template - шаблон
+columns - столбец
+gap - разрыв (пробел/отступ) (как margin)
+repeat - повторить
+*/
+
+/* 
+Попробуйте grid-template-columns или grid-template-rows
+CSS-свойства со след. значениями:
+
+100px 200px
+100px 200px 150px
+100px auto
+100px auto 200px
+70px 1fr 2fr
+repeat(8, 70px)
+100px repeat(8, 70px) 200px
+
+100px 200px auto 1fr
+
+minmax(100px, auto);
+minmax(200px, 300px) minmax(100px, auto);
+
+*/
+.grid {
+  display: grid;
+  grid-template-columns: 100px 200px;
+  /* grid-template: 100px 200px / 200px auto; */
+  grid-gap: 10px;
+}
+
+/* .grid_item { */
+.grid > div {
+  padding: 10px;
+  background: blanchedalmond;
+  border-radius: 5px;
+}

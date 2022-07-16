@@ -1,0 +1,143 @@
+/* p {
+  color: red;
+} */
+
+/* горизонтальное положение экрана - ширина больше высоты */
+/* @media (orientation: landscape) {
+  p {
+    font-size: 24px;
+    color: unset;
+  }
+} */
+
+/* вертикальное положение экрана - ширина меньше высоты */
+/* @media (orientation: portrait) {
+  p {
+    color: green;
+  }
+} */
+
+/* будет применятся, если ширина viewport меньше 300px */
+/* @media (max-width: 300px) {
+  p {
+    font-size: 24px;
+    color: darkblue;
+  }
+} */
+
+/* будет применятся, если высота viewport меньше 300px */
+/* @media (max-height: 300px) {
+  p {
+    text-decoration: line-through;
+  }
+} */
+
+/* будет применятся, если ширина viewport ,больше 300px */
+/* @media (min-width: 300px) {
+  p {
+    color: darkgoldenrod;
+  }
+} */
+
+/* будет применятся, если высота viewport больше 300px */
+/* @media (min-height: 300px) {
+  p {
+    text-decoration: overline;
+  }
+} */
+
+/* объединение медиа-запросов */
+
+/* стиль будет применятся, если мы выбрали print И ширина viewport больше 600px */
+/* @media print and (min-width: 600px) {
+  p {
+    text-decoration: underline;
+  }
+} */
+
+/* стиль будет применятся, если мы выбрали print ИЛИ ширина viewport больше 600px */
+/* @media print, (min-width: 600px) {
+  p {
+    text-decoration: underline;
+  }
+} */
+
+/* для старых браузеров - only */
+/* @media only print {
+  p {
+    text-decoration: underline;
+  }
+} */
+
+
+/* desktop first */
+/* сначала - правила для больших экранов, потом - для всё более и более мелких */
+/* p {
+  color: red;
+}
+
+@media (max-width: 1024px) {
+  p {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  p {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 320px) {
+  p {
+    font-size: 24px;
+  }
+} */
+
+
+/* mobile first */
+/* сначала - правила для наиболее маленьких экранов, потом - для всё более и более больших */
+
+/* p {
+  color: red;
+}
+
+@media (min-width: 768px) {
+  p {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  p {
+    font-size: 24px;
+  }
+} */
+
+.middle-mobile, .up-mobile, .bottom-mobile {
+  display: none;
+}
+
+/* breakpoint - точка "перехода" */
+@media (max-width: 500px) {
+  .middle-mobile, .up-mobile, .bottom-mobile {
+    display: block;
+  }
+
+  .middle, .up, .bottom {
+    display: none;
+  }
+}
+
+/* популярные брейк-пойнты (desktop-first): */
+/* 1920px
+1440px
+1200px
+1024px
+992px
+768px
+480px
+320px */
+
+/* так же есть:
+@media (device-width) {} */

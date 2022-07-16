@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS examples</title>
+  <script>
+    // выбор цвета радуги по его номеру
+
+    var colorStr = prompt('Какой по номеру цвет радуги отобразить?\n(1,2...7)');
+    var color = parseInt(colorStr);
+    var colorName;
+    
+    // старый вариант:
+    /* if (color < 1 || color > 7) {
+      alert('Цвета с таким номером в радуге нету!');
+    } else {
+      if (color == 1) {
+        colorName = 'красный';
+      } else if (color == 2) {
+        colorName = 'оранжевый';
+      } else if (color == 3) {
+        colorName = 'жёлтый';
+      } else if (color == 4) {
+        colorName = 'зелёный';
+      } else if (color == 5) {
+        colorName = 'голубой';
+      } else if (color == 6) {
+        colorName = 'синий';
+      } else if (color == 7) {
+        colorName = 'фиолетовый';
+      }
+  
+      alert('Цвет: ' + colorName);
+    } */
+
+    // switch - переключать
+
+    /* конструкция:
+    switch (<переменная>) {
+      case <значение1>:
+        ...действия1;
+        break;
+      case <значение2>:
+        ...действия2;
+        break;
+      ...
+      default:
+        ...действия;
+    }
+    */
+
+    // switch-case
+    switch (color) {
+      // case - конкретный случай
+      case 1:
+        colorName = 'красный';
+        break; // break - ломать, прекратить выполнение
+      case 2:
+        colorName = 'оранжевый';
+        break;
+      case 3:
+        colorName = 'жёлтый';
+        break;
+      case 4:
+        colorName = 'зелёный';
+        break;
+      case 5:
+        colorName = 'голубой';
+        break;
+      case 6:
+        colorName = 'синий';
+        break;
+      case 7:
+        colorName = 'фиолетовый';
+        break;
+      default: // ..., -1, 0, 8, 9, 10...
+        // default - по умолчанию - действия будут выполнятся, если ни один из case-ов не сработал
+        colorName = 'неизвестный';
+    }
+
+    alert('Цвет: ' + colorName);
+  </script>
+</head>
+<body>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo veniam repellat accusantium sequi vitae dicta quo nesciunt recusandae ipsa! Fugit quo exercitationem, officia magni est saepe labore delectus cum consequatur?</p>
+</body>
+</html>

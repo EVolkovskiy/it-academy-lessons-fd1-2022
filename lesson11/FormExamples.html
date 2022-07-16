@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Формы для ввода данных</title>
+    <style>
+      /* input {
+        display: block;
+      } */
+    </style>
+  </head>
+
+  <body>
+    <!-- ctrl+shift+p html preview -->
+    <!-- ctrl+K V -->
+
+    <!-- <input placeholder="Login"/>
+    <br />
+    <input placeholder="Password" type="password"/>
+    <br/>
+    <br/>
+    <br/> -->
+
+    <!-- <h4></h4> -->
+    <form method="post">
+      <!-- get, post -->
+      <!-- get - получить данные, отправляет введённые данные через <адрес-этой-страницы>?lastName=<>,age=<> -->
+      <!-- post - отправить данные; а адресной строке ничего не меняется -->
+
+      введите имя:
+      <!-- по-умолчанию - обычное поле для ввода строки -->
+      <!-- placeholder - place - место, holder - держатель -->
+      <input name="name" placeholder="Имя"/>
+      <br />
+
+      <label>
+        введите фамилию:
+        <input name="lastName" value="Фамилия" disabled/>
+      </label>
+      <br />
+
+      <label>
+        введите возраст:
+        <input name="age" type="number"/>
+      </label>
+      <br />
+
+      <label>
+        введите пароль:
+        <input name="password" type="password"/>
+      </label>
+      <br />
+
+      <label>
+        <input type="checkbox" checked/>
+        да/нет?
+      </label>
+      <br />
+
+      <label>
+        <input type="checkbox"/>
+        подтв. что согласен с <a href="#">условиями использования</a>?
+      </label>
+      <br />
+
+      <label>
+        <!-- radio - один из них (сейчас - полноценно не видно) -->
+        <input type="radio" />
+        красный <br/>
+        <input type="radio" checked />
+        зелёный <br/>
+        <input type="radio" disabled />
+        синий <br/>
+      </label>
+      <br />
+
+      <label>
+        тут скрытое поле
+        <input name="hiddenField" type="hidden" value="hidden-123"/>
+      </label>
+      <br />
+
+      <input type="file" />
+      <br />
+
+      <input type="button" value="Button text"/>
+      <br />
+
+      <input type="reset" value="Reset Button"/>
+      <br />
+
+      <input type="submit" value="submit Button"/>
+      <br />
+
+      <button>Button text</button>
+      <br />
+
+      <label>
+        опишите себя:
+        <!-- <input type="text"/> -->
+        <textarea placeholder="" maxlength="10">assda</textarea>
+      </label>
+      <br />
+
+      <select name="name" multiple>
+        <option>красный</option>
+        <option selected>зелёный</option>
+        <option>синий</option>
+        <option disabled>прозрачный</option>
+      </select>
+    </form>
+
+  </body>
+</html>

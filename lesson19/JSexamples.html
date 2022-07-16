@@ -1,0 +1,196 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS examples</title>
+</head>
+<body>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente similique eum maxime obcaecati, impedit consectetur ut architecto corrupti earum nihil, delectus necessitatibus soluta iure! Et aliquam nobis pariatur ullam eos?</p>
+
+  <script>
+    // script - тэг для включения JavaScript (JS)-кода на страницу
+    // // - используются для комментариев 
+
+    // функция (похоже на calc) для показа уведомления для юзера
+    // alert - внимание/тревога
+    alert("строка без комментариев");
+
+    // функция для показа уведомления для юзера (но больше для разработчика)
+    console.log("это строка отобразится в консоли");
+
+    // объявление переменной variable с использованием ключевого слова var
+    // var <имя-переменной>;
+    var variable;
+    variable = "это какое-то значение"; // присваивание значения переменной
+
+    console.log("значение variable =");
+    console.log(variable);
+
+    variable = "Абсолютно Новое Значение"; // присваивание значения переменной
+
+    console.log("значение variable =");
+    console.log(variable);
+
+    // объявление с присваиванием
+    // var <имя-переменной> = <значение-переменной>
+    var a = "Это значение сразу попало в переменную a";
+    console.log("значение a =", a);
+    // (!) A не равно а - это разные переменные (case-sensitive - чувствительный к регистру в названии переменных)
+    var A = "Это значение для A";
+    console.log("значение A =", A);
+
+    console.log('Это ещё примеры со строками');
+    console.log('Это строка объявленная через одинарные кавычки');
+    console.log("Это строка с 'одинарными кавычками' внутри");
+    console.log('Это строка с "двойными кавычками" внутри');
+    console.log('Это строка с \'одинарными кавычками\' внутри (c "экранированием")');
+    // экранирование или escape-последовательность (это тоже самое)
+    console.log('Это строка с сердцем -- \u2665 '); // \uXXXX - юникод
+    console.log('Это строка с валютой "йен" -- \u00A5 (\xA5)'); // \xA5 - ASCII
+    console.log('Это строка с валютой "йен" -- \u00A5 (\xA5)'); // \xA5 - ASCII
+
+    // \n - символ перевода строки
+    // n - new line (новая строка)
+    alert("это ещё один пример с alert-ом\nвот он - пример");
+
+    /* Основные типы данных в JS:
+    - строка
+    - число
+    - логическое - только "да" или "нет" ("правда"/"ложь") ("true"/"false")
+    - NaN - non a number 
+    - null - пустое значение
+    - undefined - пустое значение
+    */
+    
+    /* это
+    многострочный
+    комментарий
+    */
+
+    // объявление переменной с 
+    // var a = 100;
+    console.log('Примеры с числами:');
+    console.log(25);
+    console.log(-25);
+    console.log(1.03); // дробное-число (float - плавающий - число с плавающей точкой/точностью)
+    console.log('0.03', 0.03);
+    console.log('.03', .03);
+    console.log('1.2e2', 1.2e2); // экспоненциальная форма записи числа (1.2e2 = 1.2 * 10^2 = 120)
+    console.log('1.2e-2', 1.2e-2); // 1.2e-2 = 1.2 * 10^(-2) = 1.2 / 100 = 0.012
+    console.log('011', 011); // 0 - приставка для 8-и-ричных чисел 01234567 (011 = 1 * 8 + 1 = 9)
+    console.log('0xA1', 0xA1); // 0x - приставка для 16-и-ричных чисел (A1 = 10 * 16 + 1 = 161)
+
+    console.log('Арифметические операторы/действия:');
+    console.log('"2 + 3" =', 2 + 3);
+    console.log('"2 - 3" =', 2 - 3);
+    console.log('"4 * 3" =', 4 * 3);
+    console.log('"21 / 3" =', 21 / 3); // 3/2 не равно 1.5, а равно 1.499999996
+    console.log('"21 / 4" =', 21 / 4); // 5.25
+    console.log('"21 % 4" =', 21 % 4); // знак "%" никак не связан с процентами - это "остаток от деления"
+    // 21 = 5 * 4 + 1 --- используя оператор "%" - увидим результат "1"
+
+    var b = 10;
+    b = b + 2; // добавляем +2 к текущему значению b
+    console.log('"b = b + 2", b сейчас =', b); // 12
+    b += 2; // добавляем +2 к текущему значению b
+    console.log('"b += 2", b сейчас =', b); // 14
+    b -= 2; // отнимаем 2 от текущего значения b (b -= 2 --> b = b - 2)
+    console.log('"b -= 2", b сейчас =', b); // 12
+    b /= 3;
+    console.log('"b /= 3", b сейчас =', b); // 4
+    b *= 5;
+    console.log('"b *= 5", b сейчас =', b); // 20
+    
+    b++; // сначала возвращает значение, потом считает b = b + 1
+    b--; // сначала возвращает значение, потом считает b = b - 1
+    ++b; // вычисляется b = b + 1, потом возвращает значение
+    --b; // вычисляется b = b - 1, потом возвращает значение
+
+    // вот тут различие, но рекомендую так не писать
+    console.log('"b++", b сейчас =', b++); // 20
+    console.log('"++b", b сейчас =', ++b); // 22
+    console.log('"-b"', -b); // -22
+
+    console.log('Операции со строками:');
+    // a-zA-Z0-9_$
+    var c1 = "Это начало строки ";
+    var c2 = "а вот это - конец строки";
+    // конкатенация строк (объединение/слияние)
+    var c12 = c1 + c2; // c12 = "Это начало строки а вот это - конец строки"
+    var c21 = c2 + c1; // c12 = "а вот это - конец строкиЭто начало строки "
+    console.log("c1 =", c1);    
+    console.log("c2 =", c2);    
+    console.log("var c12 = c1 + c2; c12 равно =", c12);    
+    console.log("var c21 = c2 + c1; c21 равно =", c21);    
+
+    c1 += c2; // (c1 = c1 + c2)
+    console.log('с1 += c2; c1 теперь равно =', c1);
+
+    console.log();
+    console.log("логические переменные:");
+    // boolean - логический
+    // только "да" или "нет" ("правда"/"ложь") ("true"/"false")
+    var booleanYes = true;
+    var booleanNo = false;
+    console.log('booleanYes: ', booleanYes);
+    console.log('booleanNo: ', booleanNo);
+
+    console.log("операции сравнения:");
+    console.log('"5 > 3"', 5 > 3); // true
+    console.log('"3 > 5"', 3 > 5); // false
+    console.log('"5 > 5"', 5 > 5); // false
+    console.log('"5 >= 5"', 5 >= 5); // true
+    console.log('"5 < 5"', 5 < 5); // false
+    console.log('"5 <= 5"', 5 <= 5); // true
+    console.log('"5 == 5"', 5 == 5); // true (== - равны между собой)
+    console.log('"5 != 5"', 5 != 5); // false (!= - не равно)
+    console.log('"5 === 5"', 5 === 5); // true
+    console.log('"5 !== 5"', 5 !== 5); // false (!= - не равно)
+
+    console.log('разница между "==" и "==="');
+    console.log('"==" работает вот так:');
+    console.log("1 == '1'", 1 == '1'); // true (1 == 1)
+    console.log("true == '1'", true == '1'); // true (1 == 1)
+    console.log("true == 0", true == 0); // false (1 == 0)
+
+    console.log('"===" работает вот так:'); // === - проверка на значение и на тип
+    console.log("1 === '1'", 1 === '1'); // false (число и строка)
+    console.log("true === '1'", true === '1'); // false (логическое значение и строка)
+    console.log("true === 0", true === 0); // false (логическое значение и число)
+
+    console.log("логические операторы:");
+    // логическое И - только правда+правда
+    console.log('логическое И "true && true" =', true && true); // true
+    console.log('логическое И "true && false" =', true && false); // false
+    console.log('логическое И "false && true" =', false && true); // false 
+    console.log('логическое И "false && false" =', false && false); // false
+
+    // логическое ИЛИ - хоть где-то правда
+    console.log('логическое ИЛИ "true || true" = ', true || true); // true
+    console.log('логическое ИЛИ "true || false" = ', true || false); // true
+    console.log('логическое ИЛИ "false || true" = ', false || true); // true 
+    console.log('логическое ИЛИ "false || false" = ', false || false); // false
+
+    // логическое НЕ - отрицание, наоборот
+    console.log('логическое НЕ "!true" = ', !true); // false
+    console.log('логическое НЕ "!false" = ', !false); // true
+
+    // взаимодействие с юзером:
+    // prompt - быстрый/скорый
+    const promptResult = prompt("Какой-то вопрос?");
+    // promptResult - строка, которую ввёл юзер
+    console.log('promptResult', promptResult);
+    console.log('typeof promptResult', typeof promptResult); // type of - тип переменной
+    console.log('promptResult === 10', promptResult === 10); // false т.к. promptResult - строка
+
+    // confirm - подтвердить
+    const confirmResult = confirm("Какой-то вопрос?");
+    // confirmResult - логическое значение
+    console.log('confirmResult', confirmResult);
+
+  </script>
+
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo veniam repellat accusantium sequi vitae dicta quo nesciunt recusandae ipsa! Fugit quo exercitationem, officia magni est saepe labore delectus cum consequatur?</p>
+</body>
+</html>

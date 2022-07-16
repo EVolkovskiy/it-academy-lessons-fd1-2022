@@ -1,0 +1,46 @@
+
+.box {
+  height: 50px;
+  width: 100px;
+  background-color: brown;
+  display: inline-block;
+
+  /* transition - анимирует 2 состояния */
+  /* указываем - какое CSS-св-во анимировать и как долго должна длится анимация */
+  transition: background-color 1s, transform 2s, width 0.5s;
+}
+
+.box:hover {
+  background-color: rebeccapurple;
+  width: 200px;
+
+  /* transform - применить графические изменения */
+  /* scale - масштабирование */
+  /* rotate - поворот (deg - градусы) */
+  transform: scale(1.01) rotate(10deg);
+}
+
+/* border-radius */
+.button-div-1 {
+  border-radius: 50%;
+}
+
+.button-div-2 {
+  border-radius: 30px 10px;
+}
+
+/* box-shadow */
+.with-shadow {
+  box-shadow: 3px 5px 9px darkblue;
+}
+
+/* calc */
+.fullWithout150 {
+  /* для старых браузеров, если calc не работает - сработает CSS св-во указанное до него */
+  /* это называется fallback - "защита от падений", "предохранитель" */
+  width: 500px;
+  width: calc(100% - 150px);
+  /* в calc можно использовать +-/* и скобки */
+  /* width: calc(100% - 3 * (90px - 3em)); */
+}
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Методология БЭМ</title>
+    <link rel="stylesheet" href="styles1.css" />
+  </head>
+
+  <body>
+
+    <div class="menu">
+      <a class="menu_item"></a>
+      <a class="menu_item"></a>
+      <a class="menu_item"></a>
+      <a class="menu_item"></a>
+    </div>
+
+    <div class="preview">
+      <div class="preview__item">
+        <img class="preview__image"/>
+        <span class="preview__text"></span>
+      </div>
+      <div class="preview__item preview__item--active preview__item--error">
+        <img class="preview__image"/>
+        <span class="preview__text"></span>
+      </div>
+      <div class="preview__item">
+        <img class="preview__image"/>
+        <span class="preview__text"></span>
+      </div>
+      <div class="preview__item">
+        <img class="preview__image"/>
+        <span class="preview__text"></span>
+      </div>
+    </div>
+
+    <!-- неправильно - .preview__item элемент должен быть в обёрке эл. с классом .preview -->
+    <div class="preview__item"></div>
+  </body>
+</html>

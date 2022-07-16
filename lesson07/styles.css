@@ -1,0 +1,27 @@
+/* селектор - то, к чему мы применяем CSS-св-ва */
+
+/* "*" - применить правило ко всем html-тэгам */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 15px;
+  padding-left: 10px;
+}
+
+/* применение стиля ко всем <div> html-тэгам */
+div {
+  text-decoration: line-through;
+}
+
+/* применение стиля к 1 html-тэгу c этим id */
+#paragraphId {
+  text-transform: uppercase;
+}
+
+/* применение стиля ко всем html-тэгам c этим классом (class) */
+.paragraphClass {
+  font-size: 24px;
+}

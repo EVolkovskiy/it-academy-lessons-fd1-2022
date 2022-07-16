@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS examples</title>
+  <script>
+    // циклы - выполнение действий несколько раз
+
+    alert('Старт');
+
+    // for (<объявление переменных>; <проверка условий>; <итеративные действия>) { действия... }
+    // count - счёт/счётчик
+    /* for (var count = 1;; count++) {
+      console.log('count='+count);
+      if (count > 25) {
+        alert('Граница достигнута!\n (count=' + count + ')');
+        break; // прекратить выполнение этого цикла
+      }
+    } */
+    
+    // используем блок условий
+    /* for (var count = 1; count < 15; count++) {
+      console.log('count='+count);
+    }
+    alert('Граница достигнута!');
+    */
+    
+    // используем блок итеративных действий
+    /* for (var count = 1; count < 16; count = 2*count + 1) {
+      console.log('count='+count);
+    }
+    alert('Граница достигнута!');
+    */
+
+    for (var count = 3; count < 41; count++) {
+      if (count == 13) {
+        continue;
+      }
+      /* if (count % 13 == 0) {  // если count делится на 13 без остатка
+        continue;
+      } */
+      console.log('Этаж: ' + count);
+    }
+
+    alert('Конец.');
+  </script>
+</head>
+<body>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo veniam repellat accusantium sequi vitae dicta quo nesciunt recusandae ipsa! Fugit quo exercitationem, officia magni est saepe labore delectus cum consequatur?</p>
+</body>
+</html>

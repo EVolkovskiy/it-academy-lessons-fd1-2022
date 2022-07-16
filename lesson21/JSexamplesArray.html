@@ -1,0 +1,130 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS examples - массивы (+undefined +null)</title>
+  <script>
+    // все данные в массиве - одного типа
+    var productWeight1;
+    var productWeight2;
+    var productWeight3;
+    var productWeight4;
+    var productWeight5;
+
+    // массив из 5-и чисел
+    var products_weight = [1.5, 4.5, 3.5, 5.5, 6.5];
+
+    /*
+    products_weight
+      | номер | значение |
+      | -     | -        |
+      | 0     | 1.5      |
+      | 1     | 4.5      |
+      | 2     | 3.5      |
+      | 3     | 5.5      |
+      | 4     | 6.5      |
+    */
+
+    // получить значение из массива по номеру: `имя-массива[номер-элемента]`
+    console.log("элемент под номером 0 = " + products_weight[0]); // 1.5
+    console.log("элемент под номером 1 = " + products_weight[1]); // 4.5
+    console.log("элемент под номером 2 = " + products_weight[2]); // 3.5
+    console.log("элемент под номером 3 = " + products_weight[3]); // 5.5
+    console.log("элемент под номером 4 = " + products_weight[4]); // 6.5
+
+    console.log('\n');
+    console.log('весь массив: ' + products_weight);
+    console.log('\n');
+
+    // данные в массиве - разного типа
+    // массив из 5-и элементов
+    var array = [100, "Привет", 1.61, "Мир", NaN];
+    /*
+      array
+        | index | value             | // | номер | значение |
+        | -     | -                 |
+        | 0     | 100               |
+        | 1     | "Привет"          |
+        | 2     | 1.61              |
+        | 3     | "Мир"             |
+        | 4     | NaN               |
+
+        | 5     | "я новый элемент" |
+    */
+    console.log('array = ' + array) // array = 100,"Привет",1.61,"Мир",NaN
+    console.log('\n')
+
+    // методы работы с массивом:
+    // length - длинна
+    var number_of_elements1 = array.length; // 5
+    var number_of_elements2 = ['Привет', 'Мир', '!'].length; // 3
+    console.log("number_of_elements1 = " + number_of_elements1);
+    console.log("number_of_elements2 = " + number_of_elements2);
+    console.log('\n')
+
+    // добавить элемент в конец массива
+    array.push('я новый элемент'); // имя-массива.push(значение);
+    console.log("после добавления элемента длинна массива = " + array.length); // 6
+    var last_element_nom = array.length - 1;
+    console.log("номер последнего элемента в массиве = " + last_element_nom); // 5
+    console.log("значение последнего элемента = " + array[last_element_nom]); // array[5] -> "я новый элемент"
+    console.log('\n')
+
+    // удаление элемента из массива (с конца)
+    var last_element = array.pop(); // имя-массива.pop();
+    console.log("значение последнего элемента в массиве = " + last_element); // "я новый элемент"
+    console.log("после удаления элемента, длинна массива = " + array.length); // 5
+    
+    array.pop();
+    console.log("после второго удаления элемента, длинна массива = " + array.length); // 4
+    console.log('массив array сейчас: ');
+    console.log(array);
+    console.log('\n');
+
+    // удаление элемента из произвольного места в массиве
+    delete array[1]; // элемент из массива под номером 1 станет равным undefined
+    // undefined - неопределённый
+    var variable;
+
+    function test() {
+      console.log('вызов функции test');
+    }
+
+    function another_test(a) {
+      // undefined, если а не было передано в функцию
+      console.log('вызов функции another_test без аргумента; a = ' + a);
+    }
+
+    console.log(array);
+    console.log('array[1] = ' + array[1]);
+
+    // дальше - примеры, где мы видим undefined
+    console.log('array[-1] = ' + array[-1]);
+    console.log('array[20] = ' + array[20]);
+    console.log('variable = ' + variable); // т.к. не было присвоено значение
+    console.log('test() = ' + test()); // т.к. нет return
+    another_test()
+    console.log('\n');
+
+    // null - ноль, пустое, ничего
+    variable = null;
+    array[1] = null;
+
+    function null_test() {
+      console.log('вызов функции null_test');
+      return null;
+    }
+
+    console.log('variable = ' + variable);
+    console.log('array[1] = ' + array[1]);
+    console.log('null_test() = ' + null_test());
+    console.log(array);
+
+    // var array = []; // пустой массив
+  </script>
+</head>
+<body>
+  ===
+</body>
+</html>

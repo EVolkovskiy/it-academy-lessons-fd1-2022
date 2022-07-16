@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Новые селекторы (псевдоэлементы)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div id="e1" class="example">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, hic! Unde, odit, quam eum sint, ut fuga vero nesciunt minima sed similique perferendis quod? Vitae quos atque harum asperiores voluptas?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ducimus earum vitae corrupti! Consequuntur autem sapiente repellendus modi excepturi unde ipsum quis dolore totam? Nihil cupiditate reiciendis ipsa modi quam?</p>
+    </div>
+
+    <div id="e2" class="example">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, hic! Unde, odit, quam eum sint, ut fuga vero nesciunt minima sed similique perferendis quod? Vitae quos atque harum asperiores voluptas?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ducimus earum vitae corrupti! Consequuntur autem sapiente repellendus modi excepturi unde ipsum quis dolore totam? Nihil cupiditate reiciendis ipsa modi quam?</p>
+    </div>
+
+    <div id="e3" class="example">
+      <p>Hello1!</p>
+      <p>Hello2!</p>
+    </div>
+
+    <div id="e4" class="example">
+      <p data-nom="1">Hello1!</p>
+      <p data-nom="2">Hello2!</p>
+    </div>
+
+    <div id="e5" class="example">
+      <p>Hello!</p>
+      <p>Hello!</p>
+      <p>Hello!</p>
+      <p>Hello!</p>
+      <p class="reset">Hello!</p>
+      <p>Hello!</p>
+    </div>
+
+    <div id="e6" class="example">
+      <!-- используем clear: both; внутри ::after -->
+      <div class="clearfix">
+        <div class="right">right right right right right right right right right right right</div>
+        <div class="left">left left left left left left left left left left left</div>
+        <!-- <div class="clearfix"></div> -->
+      </div>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, nisi dolorem neque assumenda, laborum perferendis pariatur reiciendis rem, totam ipsa suscipit? Cum perferendis voluptatem reiciendis maxime unde, assumenda in labore.</p>
+
+      <br />
+      <br />
+
+      <!-- без .clearfix-класса - не работает -->
+      <div>
+        <div class="right">right right right right right right right right right right right</div>
+        <div class="left">left left left left left left left left left left left</div>
+        <!-- <div class="clearfix"></div> -->
+      </div>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, nisi dolorem neque assumenda, laborum perferendis pariatur reiciendis rem, totam ipsa suscipit? Cum perferendis voluptatem reiciendis maxime unde, assumenda in labore.</p>
+    </div>
+
+    <div id="e7" class="example">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quia doloribus facilis harum quidem odio quis facere, vitae, autem aliquid repudiandae nesciunt illum quod nemo veritatis dolore cumque voluptate? Nihil.</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus perferendis at explicabo possimus nulla. Officia quam quos corrupti reprehenderit sapiente, placeat in unde. Cupiditate saepe dolor magni a maxime tenetur.</p>
+    </div>
+
+    <div id="e8" class="example">
+      <ul>
+        <li>Hello 1!</li>
+        <li>Hello 2!</li>
+        <li>Hello 3!</li>
+        <li>Hello 4!</li>
+      </ul>
+    </div>
+
+  </body>
+</html>

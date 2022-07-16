@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Float2</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .left {
+      background-color: aquamarine;
+      float: left;
+      width: 25%;
+      /* height: 200px; */
+    }
+
+    .right {
+      background-color: #777;
+      float: right;
+      width: 75%;
+      /* height: 200px; */
+    }
+
+    .first {
+      background-color: aquamarine;
+      float: left;
+      width: 25%;
+      /* height: 200px; */
+    }
+    /* first+second -варианты
+    left left   - порядок важен
+    left right  - порядок не важен
+    right right - порядок важен (справа будет элемент, который шёл первым в html)
+    right left - порядок не важен
+     */
+    .second {
+      background-color: #777;
+      float: left;
+      width: 75%;
+      /* height: 200px; */
+    }
+
+    .leftCell {
+      background-color: aquamarine;
+      width: 25%;
+    }
+
+    .rightCell {
+      background-color: #777;
+      width: 75%;
+    }
+
+    .clearfix {
+      clear: both; 
+    }
+  </style>
+</head>
+
+<body>
+  <div class="right">right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right</div>
+  <div class="left">first first first first first first first first first first first first first first first first first first first first first first first first first first</div>
+  <div class="clearfix"></div>
+
+  <br>
+  <br>
+
+  <table style="width: 100%; border-collapse: collapse;">
+    <tbody>
+      <tr>
+        <td class="rightCell">right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right</td>
+        <td class="leftCell">first first first first first first first first first first first first first first first first first first first first first first first first first first</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <br>
+
+  <div class="first">first first first first first first first first first first first first first first first first first first first first first first first first first first</div>
+  <div class="second">right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right right</div>
+  <div class="clearfix"></div>
+
+</body>
+</html>

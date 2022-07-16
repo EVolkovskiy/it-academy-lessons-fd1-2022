@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery UI Accordion - Default functionality</title>
+
+  <!-- можно закомментировать и посмотреть аккордеон без доп.стилей -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <style>
+    /* "перебиваем" стили из jquery */
+    #accordion .ui-state-active {
+      background-color: green;
+    }
+
+    .ui-accordion-header {
+      display: flex !important;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+
+    .ui-accordion-header-icon {
+      align-self: center;
+      filter: invert(37%) sepia(58%) saturate(1857%) hue-rotate(131deg) brightness(92%) contrast(98%);
+    }
+  </style>
+</head>
+<body>
+  <div id="accordion">
+    <h3>Header 1</h3>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla totam suscipit ipsa. Optio porro neque nemo, laborum at iure pariatur nostrum modi cumque voluptatibus fuga possimus consectetur eos, non cupiditate.
+      </p>
+    </div>
+
+    <h3>Header 2</h3>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, doloremque expedita deleniti necessitatibus officiis voluptas velit repellat hic nisi quod enim explicabo cumque, veniam ut aperiam saepe nesciunt accusamus architecto.
+      </p>
+    </div>
+
+    <h3>Header 3</h3>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas tempore blanditiis pariatur tempora voluptates enim incidunt impedit error in ut. Eveniet impedit officia voluptatum rerum cupiditate accusantium iste quas! Ab?
+      </p>
+    </div>
+  </div>
+
+  <br />
+  <br />
+  <br />
+
+  <div class="accordion-class">
+    <h3>Header 1</h3>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla totam suscipit ipsa. Optio porro neque nemo, laborum at iure pariatur nostrum modi cumque voluptatibus fuga possimus consectetur eos, non cupiditate.
+      </p>
+    </div>
+  </div>
+
+  <div class="accordion-class">
+    <h3>Header 2</h3>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, doloremque expedita deleniti necessitatibus officiis voluptas velit repellat hic nisi quod enim explicabo cumque, veniam ut aperiam saepe nesciunt accusamus architecto.
+      </p>
+    </div>
+  </div>
+
+  <div class="accordion-class">
+    <h3>Header 3</h3>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas tempore blanditiis pariatur tempora voluptates enim incidunt impedit error in ut. Eveniet impedit officia voluptatum rerum cupiditate accusantium iste quas! Ab?
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // подключаем для группы (только 1 активный элемент)
+    $('#accordion').accordion();
+
+    // подключаем для группы по классу (много активных элементов)
+    $('.accordion-class').accordion({
+      collapsible: true,
+      icons: {
+        "header": "ui-icon-caret-1-s",
+        "activeHeader": "ui-icon-caret-1-n",
+      },
+    });
+  </script>
+</body>
+</html>

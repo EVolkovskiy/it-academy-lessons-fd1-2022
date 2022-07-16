@@ -1,0 +1,75 @@
+<html>
+<head>
+  <title>CSSExamples (background & overflow)</title>
+  <style>
+    div {
+      margin: 10px;
+      border-style: dotted;
+    }
+
+    .boxSmall {
+      height: 50px;
+      width: 50px;
+    }
+
+    .box {
+      height: 150px;
+      width: 150px;
+    }
+
+    .image {
+      /* url - можно использовать путь или base64-представление картинки */
+      background-image: url(./images/flower.jpg);
+    }
+
+    #color1 {
+      /* background - фон */
+      background-color: burlywood; 
+    }
+
+    #image2 {
+      background-repeat: repeat-x;
+    }
+    #image3 {
+      background-repeat: repeat-y;
+    }
+    #image4 {
+      background-repeat: no-repeat;
+    }
+    #image5 {
+      background-repeat: no-repeat;
+      background-position: right bottom;
+    }
+    #image6 {
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+    #image7 {
+      background-repeat: no-repeat;
+      background-position: 25% 25%;
+    }
+
+    #overflowText {
+      /* для x и для y */
+      overflow: hidden;
+      /* overflow-x: scroll;
+      overflow-y: hidden; */
+    }
+  </style>
+</head>
+<body>
+  <div id="color1" class="box">background-color</div>
+
+  <div id="image1" class="box image">background-image</div>
+  <div id="image2" class="box image">background-repeat: repeat-x</div>
+  <div id="image3" class="box image">background-repeat: repeat-y</div>
+  <div id="image4" class="box image">background-repeat: no-repeat</div>
+  <div id="image5" class="box image">background-position: right bottom;</div>
+  <div id="image6" class="box image">background-position: 50% 50%;</div>
+  <div id="image7" class="box image">background-position: 25% 25%;</div>
+
+  <div id="overflowText" class="box">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, veritatis enim minima cumque facilis maiores a error rem expedita eos, deserunt minus voluptates maxime. Cum architecto unde nisi tenetur labore.
+  </div>
+</body>
+</html>

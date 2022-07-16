@@ -1,0 +1,29 @@
+/* * {} */
+/* #ById { } */
+
+p {
+  margin-bottom: 30px !important;
+}
+
+.paragraph1 {
+  display: none;
+}
+
+.paragraph2 {
+  visibility: hidden;
+}
+
+/* opacity - прозрачность */
+.paragraph3 {
+  /* 0 - 1 */
+  opacity: 0.25;
+}
+
+.paragraph3::selection {
+  opacity: 1;
+  background-color: brown;
+}
+
+.paragraph4 {
+  margin-bottom: 50px;
+}

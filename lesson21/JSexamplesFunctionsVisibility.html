@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS examples - функции (область видимости)</title>
+  <script>
+    // эти переменные объявлены в ГЛОБАЛЬНОЙ области видимости
+    var a = 'Привет ';
+    var b = 'мир';
+    var c = ', a?';
+
+    console.log('до printHello видно переменные: ' + a + b + c); // Привет мир, a?
+
+    // функция без return
+    function printHello(a) {
+      // эти переменные объявлены в ЛОКАЛЬНОЙ области видимости
+      // когда мы "выйдем из функции" - эти переменные пропадут (или - вернут прошлое значение, если оно было)
+      
+      // одно и тоже, что и передать в качестве аргумента
+      // var a = 'Пока '; 
+      var b = 'стул';
+      console.log('Внутри printHello видно переменные: ' + a + b + c); // Как дела, стул, a?
+    }
+
+    printHello('Как дела, ');
+
+    console.log('после printHello видно переменные: ' + a + b + c); // Привет мир, a?
+
+  </script>
+</head>
+<body>
+  ---
+</body>
+</html>

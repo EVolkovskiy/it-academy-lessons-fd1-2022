@@ -1,0 +1,85 @@
+.example {
+  margin-bottom: 30px;
+  border-style: dashed;
+}
+
+#e1 p:first-child::first-letter {
+  color: brown;
+  font-size: larger;
+}
+
+#e2 p::first-line {
+  color: brown;
+}
+
+/* до */
+#e3 p::before {
+  content: "[";
+}
+
+/* после */
+#e3 p::after {
+  content: "]";
+}
+
+#e4 p::after {
+  content: "[" attr(data-nom) "]";
+  font-size: x-small;
+
+  /* поправили после урока 11 */
+  position: relative;
+  bottom: 1em;
+}
+
+#e5 p::before {
+  content: counter(nom) ". ";
+}
+
+#e5 p {
+  counter-increment: nom;
+}
+
+#e5 .reset {
+  counter-reset: nom;
+}
+
+#e6 .left {
+  background-color: aquamarine;
+  float: left;
+  width: 25%;
+  /* height: 200px; */
+}
+
+#e6 .right {
+  background-color: #777;
+  float: right;
+  width: 75%;
+  /* height: 200px; */
+}
+
+/* #e6 .clearfix {
+  clear: both;
+} */
+
+#e6 .clearfix::after {
+  clear: both;
+  content: " ";
+  display: block;
+}
+
+/* select - выделить */
+/* selection - выделение */
+#e7 p:first-child::selection {
+  color: brown;
+  /* color: white;
+  background-color: black; */
+}
+
+#e8 li::marker {
+  color: brown;
+  font-size: larger;
+  /* можно убрать маркеры, если указать след. строку: */
+  /* content: ""; */
+  /* можно попробовать использовать картинку */
+  /* content: url("..."); */
+}

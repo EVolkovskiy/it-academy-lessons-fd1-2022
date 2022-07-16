@@ -1,0 +1,9 @@
+p {
+  color: red;
+}
+
+/* не сработало */
+/* fullscreen - полноэкранный режим */
+:fullscreen {
+  color: blue;
+}
